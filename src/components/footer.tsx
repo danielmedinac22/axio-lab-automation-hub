@@ -15,8 +15,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="mb-4">
-              <a href="#" className="text-2xl font-bold">
-                <span className="text-axio-400">Axio</span> Lab
+              <a href="#" className="inline-block">
+                <img 
+                  src="/lovable-uploads/ed8432b0-d552-499f-b86e-e7933a43f67a.png" 
+                  alt="Axio Lab Logo" 
+                  className="h-10 brightness-200 filter"
+                />
               </a>
             </div>
             <p className="text-gray-400 mb-6">

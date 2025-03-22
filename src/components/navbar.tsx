@@ -42,9 +42,11 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-bold text-axio-900">
-            <span className="text-axio-600">Axio</span> Lab
-          </span>
+          <img 
+            src="/lovable-uploads/ed8432b0-d552-499f-b86e-e7933a43f67a.png" 
+            alt="Axio Lab Logo" 
+            className="h-10 md:h-12"
+          />
         </a>
 
         {/* Desktop Navigation */}
