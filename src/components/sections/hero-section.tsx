@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Robot, Zap } from "lucide-react";
+import { Bot, Zap } from "lucide-react";
 import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 
 export function HeroSection() {
@@ -67,7 +67,7 @@ export function HeroSection() {
                     <div className="flex justify-between items-start">
                       <div className="flex items-center">
                         <div className="rounded-full bg-white/10 p-3">
-                          <Robot className="h-8 w-8 text-white" />
+                          <Bot className="h-8 w-8 text-white" />
                         </div>
                         <div className="ml-4">
                           <h3 className="text-white font-semibold text-xl">Axio Virtual Assistant</h3>
