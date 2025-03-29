@@ -4,21 +4,21 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Con Axio Lab reducimos un 40% el tiempo de gestión de inventario y mejoramos la precisión de nuestras predicciones de demanda.",
+    quote: "Con YonY reducimos un 40% el tiempo de gestión de inventario y mejoramos la precisión de nuestras predicciones de demanda.",
     author: "María Rodríguez",
     position: "Directora de Operaciones",
     company: "TechSoluciones",
     image: "/placeholder.svg"
   },
   {
-    quote: "La automatización de nuestro servicio al cliente con los agentes de Axio incrementó la satisfacción del cliente en un 35% mientras reducíamos costos operativos.",
+    quote: "La automatización de nuestro servicio al cliente con los agentes de YonY incrementó la satisfacción del cliente en un 35% mientras reducíamos costos operativos.",
     author: "Carlos Mendoza",
     position: "Director de Innovación",
     company: "Grupo Innova",
     image: "/placeholder.svg"
   },
   {
-    quote: "Los agentes personalizados de Axio transformaron nuestros procesos de facturación, eliminando errores y liberando a nuestro equipo para tareas de mayor valor.",
+    quote: "Los agentes personalizados de YonY transformaron nuestros procesos de facturación, eliminando errores y liberando a nuestro equipo para tareas de mayor valor.",
     author: "Ana Gómez",
     position: "CFO",
     company: "Finanzas Globales",
