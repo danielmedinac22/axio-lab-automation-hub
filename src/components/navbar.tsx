@@ -1,10 +1,13 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -18,6 +21,7 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
   const navItems = [{
     name: "Inicio",
     href: "#"
@@ -34,20 +38,23 @@ export function Navbar() {
     name: "Contacto",
     href: "#contacto"
   }];
+  
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-bold text-axio-900 object-cover">
-            <span className="text-axio-600">Axio</span> Lab
-          </span>
+          <img 
+            src="/lovable-uploads/90b966f9-6737-45a2-9a45-ad1142a787cf.png" 
+            alt="YonY Logo" 
+            className="h-10 object-contain"
+          />
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-700 hover:text-axio-600 transition-colors font-medium text-sm">
+          {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-700 hover:text-axio-500 transition-colors font-medium text-sm">
               {item.name}
             </a>)}
-          <Button className="bg-axio-600 hover:bg-axio-700 text-white rounded-md font-medium">
+          <Button className="bg-axio-500 hover:bg-axio-600 text-white rounded-md font-medium">
             Solicitar Demo
           </Button>
         </nav>
@@ -63,10 +70,10 @@ export function Navbar() {
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-md animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-700 hover:text-axio-600 transition-colors font-medium text-base py-2" onClick={() => setMobileMenuOpen(false)}>
+            {navItems.map(item => <a key={item.name} href={item.href} className="text-gray-700 hover:text-axio-500 transition-colors font-medium text-base py-2" onClick={() => setMobileMenuOpen(false)}>
                 {item.name}
               </a>)}
-            <Button className="bg-axio-600 hover:bg-axio-700 text-white rounded-md w-full mt-2">
+            <Button className="bg-axio-500 hover:bg-axio-600 text-white rounded-md w-full mt-2">
               Solicitar Demo
             </Button>
           </div>

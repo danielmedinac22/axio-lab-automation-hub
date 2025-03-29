@@ -50,7 +50,7 @@ export function FeaturesSection() {
               <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 h-full flex flex-col">
                 <div className={cn(
                   "rounded-lg p-4 inline-flex",
-                  "bg-axio-50 text-axio-600 mb-4"
+                  "bg-axio-50 text-axio-500 mb-4"
                 )}>
                   {feature.icon}
                 </div>

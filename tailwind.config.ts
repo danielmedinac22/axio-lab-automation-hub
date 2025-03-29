@@ -54,16 +54,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				axio: {
-					50: '#f0f7ff',
-					100: '#dceeff',
-					200: '#c0dfff',
-					300: '#95caff',
-					400: '#62acff',
-					500: '#3a8aff',
-					600: '#1f68ff',
-					700: '#1453ff',
-					800: '#1743cf',
-					900: '#1a365d',
+					50: '#e6f7f9',
+					100: '#cceef3',
+					200: '#99dde7',
+					300: '#66ccd8',
+					400: '#33bbca',
+					500: '#1da2b4', // color turquesa del logo
+					600: '#17829f',
+					700: '#11617a',
+					800: '#0c4154',
+					900: '#0a2c3b', // azul oscuro del logo - texto YonY
 				}
 			},
 			borderRadius: {
