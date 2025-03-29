@@ -22,13 +22,12 @@ export function HeroSection() {
             </RevealOnScroll>
             
             <RevealOnScroll delay={100}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">Automatización Inteligente: IA que hace crecer tu negocio</h1>
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6 md:text-3xl">Automatización Inteligente:
+IA que hace crecer tu negocio</h1>
             </RevealOnScroll>
             
             <RevealOnScroll delay={200}>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
-                Desarrollamos agentes de IA a medida que optimizan tus flujos de trabajo, ahorran tiempo y aumentan la eficiencia en todas tus operaciones empresariales.
-              </p>
+              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">Desde la gestión de clientes hasta la operación interna, nuestros agentes de IA automatizan lo que más tiempo te quita.</p>
             </RevealOnScroll>
             
             <RevealOnScroll delay={300}>
