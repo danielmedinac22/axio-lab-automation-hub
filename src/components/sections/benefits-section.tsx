@@ -1,28 +1,20 @@
-
 import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { DollarSign, BarChart, Expand } from "lucide-react";
-
-const benefits = [
-  {
-    icon: <DollarSign className="h-10 w-10" />,
-    title: "Reduce costos operativos",
-    description: "Minimiza gastos mediante la automatización de tareas repetitivas, reduciendo la necesidad de intervención manual y optimizando el uso de recursos."
-  },
-  {
-    icon: <BarChart className="h-10 w-10" />,
-    title: "Mejora la toma de decisiones",
-    description: "Obtén insights valiosos y análisis en tiempo real que permiten decisiones más informadas y estratégicas para tu negocio."
-  },
-  {
-    icon: <Expand className="h-10 w-10" />,
-    title: "Escala sin complicaciones",
-    description: "Adapta tus operaciones a cualquier volumen de trabajo sin incrementar proporcionalmente los costos o el personal requerido."
-  }
-];
-
+const benefits = [{
+  icon: <DollarSign className="h-10 w-10" />,
+  title: "Reduce costos operativos",
+  description: "Minimiza gastos mediante la automatización de tareas repetitivas, reduciendo la necesidad de intervención manual y optimizando el uso de recursos."
+}, {
+  icon: <BarChart className="h-10 w-10" />,
+  title: "Mejora la toma de decisiones",
+  description: "Obtén insights valiosos y análisis en tiempo real que permiten decisiones más informadas y estratégicas para tu negocio."
+}, {
+  icon: <Expand className="h-10 w-10" />,
+  title: "Escala sin complicaciones",
+  description: "Adapta tus operaciones a cualquier volumen de trabajo sin incrementar proporcionalmente los costos o el personal requerido."
+}];
 export function BenefitsSection() {
-  return (
-    <section id="beneficios" className="py-24 bg-white relative overflow-hidden">
+  return <section id="beneficios" className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <RevealOnScroll>
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -36,8 +28,7 @@ export function BenefitsSection() {
         </RevealOnScroll>
         
         <div className="grid lg:grid-cols-3 gap-12">
-          {benefits.map((benefit, index) => (
-            <RevealOnScroll key={index} delay={150 * index}>
+          {benefits.map((benefit, index) => <RevealOnScroll key={index} delay={150 * index}>
               <div className="flex flex-col items-center text-center">
                 <div className="bg-axio-50 rounded-full p-5 mb-6 text-axio-600">
                   {benefit.icon}
@@ -45,8 +36,7 @@ export function BenefitsSection() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
-            </RevealOnScroll>
-          ))}
+            </RevealOnScroll>)}
         </div>
         
         <RevealOnScroll delay={200}>
@@ -57,7 +47,7 @@ export function BenefitsSection() {
                 <p className="text-axio-100 mb-6">Nuestros clientes experimentan una mejora promedio del 35% en eficiencia operativa tras implementar nuestras soluciones de IA.</p>
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-white">40%</div>
+                    <div className="text-3xl font-bold text-white">35%</div>
                     <div className="text-xs text-axio-200 mt-1">Reducción de costos</div>
                   </div>
                   <div>
@@ -80,7 +70,9 @@ export function BenefitsSection() {
                       <div className="ml-auto text-sm font-medium">+65%</div>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-green-400 h-2 rounded-full" style={{ width: "65%" }}></div>
+                      <div className="bg-green-400 h-2 rounded-full" style={{
+                      width: "65%"
+                    }}></div>
                     </div>
                     
                     <div className="flex items-center space-x-2">
@@ -89,7 +81,9 @@ export function BenefitsSection() {
                       <div className="ml-auto text-sm font-medium">+82%</div>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-blue-400 h-2 rounded-full" style={{ width: "82%" }}></div>
+                      <div className="bg-blue-400 h-2 rounded-full" style={{
+                      width: "82%"
+                    }}></div>
                     </div>
                     
                     <div className="flex items-center space-x-2">
@@ -98,7 +92,9 @@ export function BenefitsSection() {
                       <div className="ml-auto text-sm font-medium">+74%</div>
                     </div>
                     <div className="w-full bg-white/10 rounded-full h-2">
-                      <div className="bg-purple-400 h-2 rounded-full" style={{ width: "74%" }}></div>
+                      <div className="bg-purple-400 h-2 rounded-full" style={{
+                      width: "74%"
+                    }}></div>
                     </div>
                   </div>
                 </div>
@@ -107,6 +103,5 @@ export function BenefitsSection() {
           </div>
         </RevealOnScroll>
       </div>
-    </section>
-  );
+    </section>;
 }
