@@ -135,8 +135,8 @@ export function ContactSection() {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Ubicación</h4>
                     <p className="mt-1 text-axio-200">
-                      Calle de la Innovación, 42<br />
-                      28001 Madrid, España
+                      Cl. 44 #48A-105<br />
+                      Medellín, Colombia
                     </p>
                   </div>
                 </div>
