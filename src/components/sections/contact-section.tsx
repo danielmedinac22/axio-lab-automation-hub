@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,9 +5,10 @@ import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-
 export function ContactSection() {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,24 +16,25 @@ export function ContactSection() {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simular envío de formulario
     setTimeout(() => {
       toast({
         title: "Formulario enviado",
-        description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
+        description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto."
       });
       setIsSubmitting(false);
       setFormData({
@@ -44,9 +45,7 @@ export function ContactSection() {
       });
     }, 1500);
   };
-
-  return (
-    <section id="contacto" className="py-24 bg-gray-50 relative overflow-hidden">
+  return <section id="contacto" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-gray-50"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-axio-100 rounded-full blur-3xl opacity-30 -z-0"></div>
@@ -73,30 +72,13 @@ export function ContactSection() {
                     <label htmlFor="name" className="text-sm font-medium text-gray-700">
                       Nombre completo
                     </label>
-                    <Input 
-                      id="name"
-                      name="name"
-                      placeholder="Tu nombre"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500"
-                    />
+                    <Input id="name" name="name" placeholder="Tu nombre" value={formData.name} onChange={handleChange} required className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-gray-700">
                       Correo electrónico
                     </label>
-                    <Input 
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="tu@email.com"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500"
-                    />
+                    <Input id="email" name="email" type="email" placeholder="tu@email.com" value={formData.email} onChange={handleChange} required className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500" />
                   </div>
                 </div>
                 
@@ -104,37 +86,17 @@ export function ContactSection() {
                   <label htmlFor="company" className="text-sm font-medium text-gray-700">
                     Empresa
                   </label>
-                  <Input 
-                    id="company"
-                    name="company"
-                    placeholder="Nombre de tu empresa"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500"
-                  />
+                  <Input id="company" name="company" placeholder="Nombre de tu empresa" value={formData.company} onChange={handleChange} className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500" />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-gray-700">
                     Mensaje
                   </label>
-                  <Textarea 
-                    id="message"
-                    name="message"
-                    placeholder="¿Cómo podemos ayudarte?"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500"
-                  />
+                  <Textarea id="message" name="message" placeholder="¿Cómo podemos ayudarte?" rows={5} value={formData.message} onChange={handleChange} required className="rounded-md border-gray-300 focus:border-axio-500 focus:ring-axio-500" />
                 </div>
                 
-                <Button 
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-axio-600 hover:bg-axio-700 text-white rounded-md font-medium py-3"
-                >
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-axio-600 hover:bg-axio-700 text-white rounded-md font-medium py-3">
                   {isSubmitting ? "Enviando..." : "Enviar mensaje"} 
                   {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
                 </Button>
@@ -152,7 +114,7 @@ export function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Email</h4>
-                    <p className="mt-1 text-axio-200">contacto@axiolab.com</p>
+                    <p className="mt-1 text-axio-200">yonyagents@gmail.com</p>
                   </div>
                 </div>
                 
@@ -162,7 +124,7 @@ export function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Teléfono</h4>
-                    <p className="mt-1 text-axio-200">+34 91 123 4567</p>
+                    <p className="mt-1 text-axio-200">+57 91 123 4567</p>
                   </div>
                 </div>
                 
@@ -195,6 +157,5 @@ export function ContactSection() {
           </RevealOnScroll>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
