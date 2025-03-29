@@ -1,6 +1,7 @@
 
 import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { Quote } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -8,21 +9,21 @@ const testimonials = [
     author: "María Rodríguez",
     position: "Directora de Operaciones",
     company: "TechSoluciones",
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/689296b0-3d61-462e-93c9-07a56c96f81b.png" // Using the uploaded image
   },
   {
     quote: "La automatización de nuestro servicio al cliente con los agentes de YonY incrementó la satisfacción del cliente en un 35% mientras reducíamos costos operativos.",
     author: "Carlos Mendoza",
     position: "Director de Innovación",
     company: "Grupo Innova",
-    image: "/placeholder.svg"
+    image: "/photo-1581092795360-fd1ca04f0952.jpg" // Stock photo of a man in business attire
   },
   {
     quote: "Los agentes personalizados de YonY transformaron nuestros procesos de facturación, eliminando errores y liberando a nuestro equipo para tareas de mayor valor.",
     author: "Ana Gómez",
     position: "CFO",
     company: "Finanzas Globales",
-    image: "/placeholder.svg"
+    image: "/photo-1649972904349-6e44c42644a7.jpg" // Stock photo of a woman
   }
 ];
 
@@ -33,7 +34,7 @@ export function TestimonialsSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50 -z-10"></div>
       
       {/* Decorative elements */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-axio-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute top-1/2 left-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-20 -z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6">
@@ -52,15 +53,20 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <RevealOnScroll key={index} delay={150 * index}>
               <div className="bg-white rounded-xl p-8 shadow-md relative h-full flex flex-col">
-                <Quote className="absolute top-6 right-6 h-10 w-10 text-axio-100 opacity-60" />
+                <Quote className="absolute top-6 right-6 h-10 w-10 text-primary opacity-60" />
                 <p className="text-gray-700 mb-6 italic text-lg relative z-10">"{testimonial.quote}"</p>
                 <div className="mt-auto flex items-center">
                   <div className="flex-shrink-0">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.author}
-                      className="h-12 w-12 rounded-full object-cover border-2 border-axio-200"
-                    />
+                    <Avatar className="h-12 w-12 border-2 border-primary/20">
+                      <AvatarImage 
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="object-cover"
+                      />
+                      <AvatarFallback className="bg-primary/10 text-primary">
+                        {testimonial.author.split(' ').map(name => name[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
                   </div>
                   <div className="ml-4">
                     <div className="font-medium text-gray-900">{testimonial.author}</div>
