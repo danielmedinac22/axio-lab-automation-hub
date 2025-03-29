@@ -17,8 +17,8 @@ export function Footer() {
             <div className="mb-4">
               <a href="#" className="inline-block">
                 <img 
-                  src="/lovable-uploads/2f96f8e7-8e0d-4a0e-83cd-64fdbaebd3a7.png" 
-                  alt="YonY Logo" 
+                  src="/lovable-uploads/ed8432b0-d552-499f-b86e-e7933a43f67a.png" 
+                  alt="Axio Lab Logo" 
                   className="h-10 brightness-200 filter"
                 />
               </a>
@@ -90,7 +90,7 @@ export function Footer() {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} YonY. Todos los derechos reservados.
+            © {new Date().getFullYear()} Axio Lab. Todos los derechos reservados.
           </p>
           <button 
             onClick={scrollToTop}
