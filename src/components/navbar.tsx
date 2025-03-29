@@ -1,13 +1,10 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -21,7 +18,6 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
   const navItems = [{
     name: "Inicio",
     href: "#"
@@ -38,15 +34,10 @@ export function Navbar() {
     name: "Contacto",
     href: "#contacto"
   }];
-  
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4", isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent")}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <img 
-            src="/lovable-uploads/90b966f9-6737-45a2-9a45-ad1142a787cf.png" 
-            alt="YonY Logo" 
-            className="h-10 object-contain"
-          />
+          <img alt="YonY Logo" src="/lovable-uploads/1a298c73-ad1f-4b8a-9518-869811bd5d7c.png" className="h-20 object-contain" />
         </a>
 
         {/* Desktop Navigation */}

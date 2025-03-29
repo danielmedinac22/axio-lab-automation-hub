@@ -1,12 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Bot, Zap } from "lucide-react";
 import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
-
 export function HeroSection() {
-  return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+  return <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-axio-100 -z-10"></div>
       
@@ -25,9 +22,7 @@ export function HeroSection() {
             </RevealOnScroll>
             
             <RevealOnScroll delay={100}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">
-                Automatiza tus procesos con agentes de IA personalizados
-              </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">Automatización Inteligente: IA que hace crecer tu negocio</h1>
             </RevealOnScroll>
             
             <RevealOnScroll delay={200}>
@@ -38,20 +33,10 @@ export function HeroSection() {
             
             <RevealOnScroll delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className={cn(
-                    "bg-axio-600 hover:bg-axio-700 text-white",
-                    "rounded-md font-medium transition-all duration-300 text-base px-8"
-                  )}
-                >
+                <Button size="lg" className={cn("bg-axio-600 hover:bg-axio-700 text-white", "rounded-md font-medium transition-all duration-300 text-base px-8")}>
                   Solicita una Demo
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="rounded-md font-medium border-gray-300 hover:bg-gray-100 transition-all duration-300 text-base px-8"
-                >
+                <Button size="lg" variant="outline" className="rounded-md font-medium border-gray-300 hover:bg-gray-100 transition-all duration-300 text-base px-8">
                   Más información
                 </Button>
               </div>
@@ -70,7 +55,7 @@ export function HeroSection() {
                           <Bot className="h-8 w-8 text-white" />
                         </div>
                         <div className="ml-4">
-                          <h3 className="text-white font-semibold text-xl">Axio Virtual Assistant</h3>
+                          <h3 className="text-white font-semibold text-xl">YonY Virtual Assistant</h3>
                           <p className="text-axio-200 text-sm">Agente IA Empresarial</p>
                         </div>
                       </div>
@@ -106,6 +91,5 @@ export function HeroSection() {
           </RevealOnScroll>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
