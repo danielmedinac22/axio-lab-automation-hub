@@ -4,7 +4,22 @@ import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { ArrowRight } from "lucide-react";
 
 export function CTASection() {
-  return <section className="py-20 bg-white relative overflow-hidden">
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contacto");
+    if (contactSection) {
+      const navbarHeight = 100; // Approximate navbar height
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  return (
+    <section className="py-20 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-axio-900 to-axio-700 -z-10"></div>
       <div className="absolute top-0 right-0 w-64 h-64 bg-axio-600 rounded-full blur-3xl opacity-30 -z-10"></div>
@@ -26,15 +41,25 @@ export function CTASection() {
           
           <RevealOnScroll delay={200}>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-white text-axio-900 hover:bg-gray-100 rounded-md font-medium px-8">
+              <Button 
+                size="lg" 
+                className="bg-white text-axio-900 hover:bg-gray-100 rounded-md font-medium px-8"
+                onClick={scrollToContact}
+              >
                 Solicita una Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 rounded-md font-medium px-8 text-white bg-transparent hover:bg-white/10">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 rounded-md font-medium px-8 text-white bg-transparent hover:bg-white/10"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 Conoce más <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </RevealOnScroll>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
