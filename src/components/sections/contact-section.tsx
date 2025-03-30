@@ -36,7 +36,7 @@ export function ContactSection() {
       
       try {
         // Intentar enviar al webhook externo
-        const response = await fetch('https://danielmc2.app.n8n.cloud/webhook/5fc22611-496a-453c-8d3e-72d5fbe52e62', {
+        const response = await fetch('https://danielmc2.app.n8n.cloud/webhook-test/5fc22611-496a-453c-8d3e-72d5fbe52e62', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
