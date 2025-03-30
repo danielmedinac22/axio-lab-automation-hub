@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,9 +8,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 export function ContactSection() {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,34 +18,57 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simular envío de formulario
-    setTimeout(() => {
+    try {
+      // Send data to the webhook
+      const response = await fetch('https://danielmc2.app.n8n.cloud/webhook/5fc22611-496a-453c-8d3e-72d5fbe52e62', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+          company: formData.company || "No especificado",
+          message: formData.message
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Formulario enviado",
+          description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto."
+        });
+        // Reset form after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          message: ""
+        });
+      } else {
+        throw new Error('Error al enviar el formulario');
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
       toast({
-        title: "Formulario enviado",
-        description: "Gracias por contactarnos. Nos pondremos en contacto contigo pronto."
+        title: "Error",
+        description: "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.",
+        variant: "destructive"
       });
+    } finally {
       setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        message: ""
-      });
-    }, 1500);
+    }
   };
 
   return <section id="contacto" className="py-24 bg-gray-50 relative overflow-hidden">
