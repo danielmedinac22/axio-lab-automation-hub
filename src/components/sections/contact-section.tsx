@@ -124,7 +124,7 @@ export function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Teléfono</h4>
-                    <p className="mt-1 text-axio-200">+57 91 123 4567</p>
+                    <p className="mt-1 text-axio-200">+57 3167405767</p>
                   </div>
                 </div>
                 
