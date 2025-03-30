@@ -1,4 +1,3 @@
-
 import { ArrowUp } from "lucide-react";
 
 export function Footer() {
@@ -12,8 +11,11 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
+        
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
+            
             <div className="mb-4">
               <a href="#" className="inline-block">
                 <img 
@@ -55,6 +57,7 @@ export function Footer() {
             </div>
           </div>
           
+          
           <div>
             <h3 className="font-semibold text-lg mb-4">Enlaces rápidos</h3>
             <ul className="space-y-3">
@@ -66,6 +69,7 @@ export function Footer() {
             </ul>
           </div>
           
+          
           <div>
             <h3 className="font-semibold text-lg mb-4">Servicios</h3>
             <ul className="space-y-3">
@@ -76,6 +80,7 @@ export function Footer() {
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Integración de sistemas</a></li>
             </ul>
           </div>
+          
           
           <div>
             <h3 className="font-semibold text-lg mb-4">Legal</h3>

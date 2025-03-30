@@ -5,6 +5,7 @@ import { RevealOnScroll } from "@/components/ui/reveal-on-scroll";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+
 export function ContactSection() {
   const {
     toast
@@ -16,6 +17,7 @@ export function ContactSection() {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -26,6 +28,7 @@ export function ContactSection() {
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -45,6 +48,7 @@ export function ContactSection() {
       });
     }, 1500);
   };
+
   return <section id="contacto" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-gray-50"></div>
@@ -135,8 +139,8 @@ export function ContactSection() {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-white">Ubicación</h4>
                     <p className="mt-1 text-axio-200">
-                      Calle de la Innovación, 42<br />
-                      28001 Madrid, España
+                      Calle 18 #43G-90<br />
+                      Medellín, Colombia
                     </p>
                   </div>
                 </div>
